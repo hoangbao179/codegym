@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let vatli=prompt("Nhập điểm vật lí:");
+    let hoahoc=prompt("Nhập điểm Hóa học ");
+    let sinhhoc=prompt("Nhập điểm Sinh học: ");
+    diemvatli=parseInt(vatli);
+    diemhoahoc=parseInt(hoahoc);
+    diemsinhhoc=parseInt(sinhhoc);
+    let diemtong=diemvatli+diemsinhhoc+diemhoahoc;
+    let diemtrungbinh=diemtong/3;
+    document.write("Điểm tổng : " + diemtong); 
+    document.write("Điểm trung binh : " +diemtrungbinh);
+</script>
+</body>
+</html>
