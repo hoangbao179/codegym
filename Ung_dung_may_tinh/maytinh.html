@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Máy tính</title>
+</head> <h1>Caculator</h1>
+<body>
+    <table>
+        <tr>
+            <form>
+                <th>
+                    <input type = "number" id = "a" size = 40>
+                </th>
+            </form>
+            <form>
+                <th>
+                    <input type="number" id = "b" size = 40>
+                </th>
+            </form>
+        </tr>
+        <br>
+        <tr>
+            <th> <button type = "button" onclick = "add()"> Addtions</button></th>
+            <th> <button type = "button" onclick = "sub()"> Subtraction</button></th>
+            <th> <button type = "button" onclick = "multi()"> Multiplication</button></th>
+            <th> <button type = "button" onclick = "divi()"> Division</button></th>
+        </tr>
+    </table>
+    <p id = ketqua ></p>
+    <script>
+
+    function add()
+    {
+    let a = parseFloat( document.getElementById("a").value)
+    let b = parseFloat( document.getElementById("b").value)
+    
+        document.getElementById("ketqua").innerHTML = " Addtions = " + (a+b)
+    }
+    function sub()
+    {
+    let a = parseFloat( document.getElementById("a").value)
+    let b = parseFloat( document.getElementById("b").value)
+    
+        document.getElementById("ketqua").innerHTML = " Subtraction = " + (a-b)
+    }
+    function multi()
+    {
+    let a = parseFloat( document.getElementById("a").value)
+    let b = parseFloat( document.getElementById("b").value)
+    
+        document.getElementById("ketqua").innerHTML = " Multiplication = " + (a*b)
+    }
+    function divi()
+    {
+    let a = parseFloat( document.getElementById("a").value)
+    let b = parseFloat( document.getElementById("b").value)
+    if ( b === 0)
+    { 
+        alert( "Không được nhập số 0")
+        }
+    else
+    {
+        document.getElementById("ketqua").innerHTML = " Division = " + (a/b)
+    }
+    }
+    </script>
+</body>
+</html>
