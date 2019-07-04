@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <br>
+        <tr>
+            <th>
+            <input type = "number" id = "amount" size=20 >
+        </th>
+        <br>
+        <th>
+             <select id= "fromcurrency">
+                <option value="vnd">VND</option>;
+                <option value="usd">USD</option>;
+            </select>
+        </th>
+        <br>
+        <th>
+        <select id = "tocurrency">
+                <option value="vnd">VND</option>;
+                <option value="usd">USD</option>;
+        </select>
+            </th>
+        <th>
+            <button type="button" onclick="myconvert()" style="background-color: DodgerBlue;"> Convert </button>         
+        </th>
+        </tr>
+    </table>
+    <p id = "ketqua" ></p>
+    <script>
+    function myconvert()
+    {
+    let amount = document.getElementById("amount").value;
+    let fromcurrency = document.getElementById("fromcurrency").value;
+    let tocurrency = document.getElementById("tocurrency").value;
+    if (amount < 0) alert (" Số nhập vào phải lớn hơn 0")
+    else
+    if (fromcurrency === "usd" && tocurrency === "vnd")
+        {
+             document.getElementById("ketqua").innerHTML = "Giá trị chuyển đổi từ USD sang VND:  " + amount*23000
+             }
+    if (fromcurrency === "vnd" && tocurrency === "usd")
+        {
+             document.getElementById("ketqua").innerHTML = "Giá trị chuyển đổi từ VND sang USD: " + amount/23000
+             }
+    if (fromcurrency === tocurrency)
+        { 
+            document.getElementById("ketqua").innerHTML = "Giá trị chuyển đổi: " + amount
+            }
+    }
+    </script>
+</body>
+</html>
