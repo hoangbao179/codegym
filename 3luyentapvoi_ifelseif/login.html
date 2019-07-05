@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt ("Nhập tên người dùng")
+        if (a == "Admin") 
+            {
+                 let b = prompt ( "Nhập mật khẩu ");
+                     if ( b == "Themaster")   
+                     { 
+                        document.write("Welcome");
+                     }
+                    else if ( b == ""|| b == null){
+                        document.write("Canceled");
+                        }
+                    else document.write("Wrong password")
+                }
+            
+        else {
+                if (a === ""|| a==null) {document.write("Cancel")}
+                    else document.write("I don’t know you")       
+                 }
+</script>
+
+</body>
+</html>
