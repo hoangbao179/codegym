@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="b()">
+    <img src = "nobita.png" style="position:absolute;left:0; top:0;" id = "nobita" width="300" height="400"/>
+    <script>
+            function b()
+            {   
+                window.addEventListener('keydown', nhanphim)
+            }
+            
+        function xuong()
+        {
+            let a = document.getElementById("nobita");
+            a.style.top = parseInt(a.style.top) - 20+ 'px';
+        }
+
+        function len()
+        {
+            let a = document.getElementById("nobita");
+            a.style.top = parseInt(a.style.top) + 20 + 'px';
+        }
+
+        function trai()
+        {
+            let a = document.getElementById("nobita");
+            a.style.left = parseInt(a.style.left) + 20 + 'px';
+        }
+
+        function phai()
+        {
+            let a = document.getElementById("nobita");
+            a.style.left = parseInt(a.style.left) - 20 + 'px';
+        }
+        
+        function nhanphim(evt)
+        {
+            switch (evt.keyCode)
+            {
+                case 39:
+                    trai();
+                    break;
+                case 40:
+                    len();
+                    break;
+                case 37:
+                    phai();
+                    break;
+                case 38:
+                    xuong();
+                    break;                   
+                }
+        }
+
+        </script>
+
+</body>
+</html>
