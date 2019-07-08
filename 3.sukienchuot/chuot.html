@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload = c()>
+    <form>
+        <img id = "hinhanh" src ="a.jpg" />
+        <p>Click button below to move the image to right</p>
+        <input type="button" value ="Click me" onclick ="quaphai()" />
+    </form>
+    <script>
+        
+        let b = null;
+        b = document.getElementById("hinhanh");
+        function c()
+        {
+            b = document.getElementById("hinhanh");
+            b.style.position = "relative";
+            b.style.left = "0px";
+        }
+
+        function quaphai()
+        {
+            b.style.left = parseInt(b.style.left) + 10 + 'px';
+        }
+    </script>
+</body>
+</html>
