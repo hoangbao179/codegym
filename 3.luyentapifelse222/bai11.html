@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thuế cá nhân</title>
+</head>
+<body>
+    <script>
+        let a= +prompt('Nhập thu nhập của bạn');
+        while (a<=0)
+                 a= +prompt("Nhập lại thu nhập của bạn");
+
+        document.write("Thu nhập trên 10 triệu sẽ nộp thuế 5% <br>");
+        document.write("Thu nhập trên 20 triệu sẽ nộp thuế 10% <br><br>");
+
+
+        if (a<=10000000) {
+                document.write("Bạn không cần nộp thuế");
+                    }
+
+        else if(a<=20000000) {
+            let b= (a-10000000)*0.05;
+            document.write("Thuế thu nhập của bạn phải nộp là "+b+ " đồng");
+        }
+        
+        else {
+            let b=(a-20000000)*0.1
+            document.write("Thuế thu nhập của bạn phải nộp là "+b+ " đồng");
+        }
+
+    
+    </script>
+
+</body>
+</html>

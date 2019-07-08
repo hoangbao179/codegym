@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kiểm tra tam giác</title>
+</head>
+<body>
+        <script>
+            let a= +prompt("Nhập cạnh a");
+            let b= +prompt("Nhập cạnh b");
+            let c= +prompt("Nhập cạnh c");
+
+            if (a<=0 || b<=0 || c<=0)
+                {
+                    alert("Đây không phải 3 cạnh của 1 tam giác")
+                }
+            
+            else if (a+b>c && a+c>b && b+c>a)
+                    {
+                        alert ("Đây là 3 cạnh của 1 tam giác")
+                    }
+
+                else alert("Đây không phải 3 cạnh của 1 tam giác")
+            
+        </script>
+</body>
+</html>

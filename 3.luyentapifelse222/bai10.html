@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giá điện bậc thang</title>
+</head>
+<body>
+    <script>
+        let a= prompt('Nhập giá điện');
+        while (a<=0)
+                 a= +prompt("Nhập lại giá điện");
+        
+        document.write("Giá điện 50 KWh đầu 1500đ <br>");
+        document.write("Giá điện 50 KWh tiếp theo 2000đ <br>");
+        document.write("Giá điện 50 KWh tiếp theo 3000đ <br>");
+        document.write("Sau đó giá mỗi chữ 4000d <br>");
+        document.write("Xài ít tiền ít xài nhiều tiền nhiều <br> <br>");
+
+        if (a<=50) {
+                let k = a*1500;
+                document.write("Tiền điện tháng này của bạn là "+k+" đồng")
+                    }
+
+        else if (a<=100) {
+                let k = (a-50)*2000+50*1500;
+                document.write("Tiền điện tháng này của bạn là "+k+" đồng")
+                        }
+
+        else if (a<=150) {
+                let k = (a-100)*3000+50*2000+50*1500;
+                document.write("Tiền điện tháng này của bạn là "+k+" đồng")
+                         }
+
+        else  {
+                let k = (a-150)*4000+50*3000+50*2000+50*1500;
+                document.write("Tiền điện tháng này của bạn là "+k+" đồng")
+              }
+
+    </script>
+</body>
+</html>
