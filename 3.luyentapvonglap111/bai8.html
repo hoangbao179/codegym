@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trò chơi</title>
+</head>
+<body>
+    <button type="button" onclick="nut()">Chơi</button>
+    <script>
+        let i=1;
+        function nut()
+        {
+    let sobe= +prompt("Nhập vào khoảng giá trị đầu ");
+    let solon= +prompt("Nhập vào khoảng giá trị sau");
+    let maydoan= Math.floor(Math.random()*(solon-sobe))+(sobe);
+
+    while(i<=3) {
+    let nguoidoan= +prompt("Nhập giá trị dự đoán của bạn");
+    if(nguoidoan==maydoan)
+                     {   
+                alert("Chúc mừng bạn");
+                      break;
+                      }
+
+        else { if (nguoidoan>maydoan)
+                    {
+            alert("Số bạn nhập cao hơn số máy đoán")   ;    
+                    }
+
+            else alert("Số bạn nhập thấp hơn số máy đoán");
+                i=i+1;
+            }  
+
+                }
+
+    if (i>=3) alert("Bạn đã thua cuộc");
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let k=0;
+    function dayso(number)
+        {
+        if(number<2)
+        return 1;
+        else    {
+            number= dayso(number-1)+dayso(number-2);
+            return number;
+                 }
+        }
+
+        for(i=2; k<1; i++)
+            {
+                if(dayso(i)%5==0)
+                {
+                    document.write("Số fibo chia hết cho 5 đầu tiên là "+dayso(i));
+                    k=k+1;
+                }
+
+            }
+    
+    </script>
+</body>
+</html>
