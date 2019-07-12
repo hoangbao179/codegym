@@ -9,9 +9,18 @@
 <body>
     <script>
     let mang= [ -3,5,1,3,2,10];
-    let first = 0;
-    
-    
+    let dau = 0;
+    let cuoicung = mang.length-1;
+        while(dau<cuoicung)
+        {
+            let ngaunhien=mang[dau];
+            mang[dau]=mang[cuoicung];
+            mang[cuoicung]=ngaunhien;
+
+            dau=dau+1;
+            cuoicung=cuoicung-1;
+        }
+        document.write(mang);
     </script>
 </body>
 </html>

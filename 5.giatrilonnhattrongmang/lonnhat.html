@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mang = [2,6,6,9,12,3,-5,6,1,5,3,-12];
+        let max = mang[0];
+        for(let i=1; i<=mang.length; i++)
+        {
+            if(max<mang[i]) 
+                    { 
+                        max = mang[i]
+                    }
+
+        }
+    document.write("Giá trị lớn nhất trong mảng là "+ max);
+    </script>
+</body>
+</html>

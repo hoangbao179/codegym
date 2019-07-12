@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let so= +prompt("Nhập số cần tim",3);
+        let mang=[-3, 5, 1,3,2, 10,3,6,3,4,5,3];
+        let chiso=0;
+        let mangchiso = [];
+        let k=-1;
+        for(let i=0; i<=mang.length; i++)
+        {
+            if (mang[i] ==so)
+            {
+
+                k=k+1;
+                mangchiso[k]=i;
+            }
+        }
+        document.write(mang+"<br>");
+
+        if (k==-1) document.write("Không có số cần tìm");
+
+        else {
+                    document.write("Số cần tìm là "+so+"<br>")
+
+                    for(m=0; m<mangchiso.length; m++)
+                    {
+                            document.write("Vị trí thứ "+mangchiso[m]+ " là trùng số cần tìm  <br>");
+            
+                    }
+            }
+    </script>
+</body>
+</html>

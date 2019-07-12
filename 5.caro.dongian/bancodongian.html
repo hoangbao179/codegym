@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id ="a"></p>
+    <input type="button" id = "nut" value=Change onclick="thaydoivitri()">
+    <script>
+    let mang =[];
+    let dulieu="";
+    for (let i=0; i<5; i++)
+            {
+            mang[i]= new Array(0,0,0,0,0)
+            }
+
+    for ( i=0; i<5; i++)
+            {
+                dulieu= dulieu+ "<br>";
+                for(let j=0; j<5; j++)
+                {
+                    dulieu=dulieu+(mang[i][j]+ "&nbsp;&nbsp;"); 
+                }
+
+            }
+
+
+   document.getElementById("a").innerHTML=dulieu;
+
+   function thaydoivitri(){
+        let vitri1= +prompt("Nhập vị trí x");
+        let vitri2 = +prompt("Nhập vị trí y");
+        mang[vitri1][vitri2]="x";
+        dulieu="";
+
+              for ( i=0; i<5; i++)
+                {
+                    dulieu= dulieu+ "<br>";
+                    for(let j=0; j<5; j++)
+                    {
+                        dulieu=dulieu+(mang[i][j]+ "&nbsp;&nbsp;"); 
+                    }
+                
+                    document.getElementById("a").innerHTML=dulieu;
+                }
+   }
+    </script>
+</body>
+</html>
