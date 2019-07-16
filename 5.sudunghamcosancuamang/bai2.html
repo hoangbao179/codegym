@@ -10,20 +10,20 @@
     <script>
         let sonhapvao= +prompt("Nhập số");
         let soluong= sonhapvao.toString();
-        let ketqua = [soluong[0]];
+        let ketqua = [];
         for(let x=1; x<soluong.length; x++)
         {
             if((soluong[x-1]%2 === 0)&&(soluong[x]%2 === 0))
-     {
-      ketqua.push('-', soluong[x]);
-     }
-    else
-     {
-      ketqua.push(soluong[x]);
-     }
-        }
-    
-    document.write(ketqua);
+                {
+                ketqua.push('-'+ soluong[x]);
+                }
+                else
+                {
+                ketqua.push(soluong[x]);
+                }
+                    }
+                
+    document.write(ketqua.join(" "));
     </script>
 </body>
 </html>

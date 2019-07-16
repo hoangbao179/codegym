@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id = "dulieu" >
+    <input type="button"  onclick="nhannut()"  style="color: brown" value="Kiểm tra">
+    <p id ="ketqua"></p>
+    <script>
+        let mang1= ["apple", "pen", "ruler", "laptop", "water"];
+        let mang2= ["trái táo", "cây bút","cây thước", "máy vi tính xách tay", "nước"];
+
+        
+        function tudien()
+            {
+            let dulieu = document.getElementById("dulieu").value;
+
+            for (let i=0; i<mang1.length; i++)
+                {
+                    if(mang1[i] === dulieu)
+                        return mang2[i];
+                }
+                return document.write("Không có ý nghĩa");
+            }
+
+        function nhannut()
+            {
+                document.getElementById("ketqua").innerHTML=tudien();
+            }
+    
+    
+    </script>
+</body>
+</html>
