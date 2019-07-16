@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài 2</title>
+</head>
+<body>
+    <script>
+        let sonhapvao= +prompt("Nhập số");
+        let soluong= sonhapvao.toString();
+        let ketqua = [soluong[0]];
+        for(let x=1; x<soluong.length; x++)
+        {
+            if((soluong[x-1]%2 === 0)&&(soluong[x]%2 === 0))
+     {
+      ketqua.push('-', soluong[x]);
+     }
+    else
+     {
+      ketqua.push(soluong[x]);
+     }
+        }
+    
+    document.write(ketqua);
+    </script>
+</body>
+</html>

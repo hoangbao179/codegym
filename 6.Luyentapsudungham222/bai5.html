@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let number1= +prompt("Nhập vào số đầu tiên");
+    let number2= +prompt("Nhập vào số thứ 2");
+    let number3= +prompt("Nhập vào số thứ 3");
+
+
+    function min(num1,num2,num3)
+    {
+        // min=num1;
+            if (num1<num2)
+            {
+                    if (num1<num3)
+                    {
+                        return num1;
+                    }
+                    else return num3;
+            }
+            else {
+                    if (num2<num3)  
+                            return num2;
+                    else    return num3;
+            }
+    }
+    document.write("Số bé nhất trong ba số là "+min(number1, number2, number3));
+
+    </script>
+</body>
+</html>

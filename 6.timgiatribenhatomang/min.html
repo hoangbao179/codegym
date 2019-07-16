@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let mang1=[31, 6, 9, 5, 6, 98, -6, 5, 5, 7];
+    let mang2=[7, 12, 6, 9, 20, 56, 89];
+    let mang3=[];
+    let mang4=[0,0,0,0,0,0,0,0,0];
+    
+    function giatribenhat(mang)
+        {   
+                if (mang.length==0) return "Mảng này rỗng";
+                let min=mang[0];
+ 
+                for(let i=0; i<mang.length; i++ )
+                    {
+                            if( mang[i]<min)
+                                {
+                                    min=mang[i];
+     
+                                }
+
+                    }
+
+            return min;
+        }
+
+    
+     
+   let min1=giatribenhat(mang1)
+   document.write("Mảng này có giá trị nhỏ nhất là "+min1+"<br>");
+   let min2=giatribenhat(mang2)
+   document.write("Mảng này có giá trị nhỏ nhất là "+min2+"<br>");
+   let min3=giatribenhat(mang3)
+   document.write("Mảng này có giá trị nhỏ nhất là "+min3+"<br>");
+   let min4=giatribenhat(mang4)
+   document.write("Mảng này có giá trị nhỏ nhất là "+min4+"<br>");
+
+
+    </script>
+</body>
+</html>

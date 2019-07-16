@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính nhiệt độ</title>
+</head>
+<body>
+            <form>
+                <label>Chuyển đổi nhiệt độ</label>
+
+                <input type="number" id="giatri" oninput="tinhnhietdo(this.value)">
+                <p> Độ C <span id="nhietdoc"></span> </p>
+
+            </form>
+
+            <script>  
+            function tinhnhietdo(sonhapvao)
+                {
+                    sonhapvao = parseFloat( sonhapvao);
+                    document.getElementById("nhietdoc").innerHTML=(sonhapvao-32)/1.8;
+                }
+
+</script>
+</body>
+</html>

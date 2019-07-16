@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: brown">Chuyển đổi hệ mét và feet</h1>
+    <form >
+        <input  type="number" id="giatri1" placeholder="Nhập mét"
+            oninput=tinhtoan1(this.value) style="color: chocolate">
+
+        <p style="color: chocolate"> Giá trị chuyển đổi <span id = "ketqua1"></span> </p>
+     
+
+        <input type="number" id= "giatri2" placeholder="Nhập feet"
+            oninput=tinhtoan2(this.value) style="color: chocolate">
+
+        <p style="color: chocolate" >Giá trị chuyển đổi <span id = "ketqua2"></span>  </p>
+
+        <script>
+
+        function tinhtoan1(giatri1)
+                {
+                    document.getElementById("ketqua1").innerHTML=3.279*giatri1;
+
+                }
+        
+        function tinhtoan2(giatri2)
+                {
+                    document.getElementById("ketqua2").innerHTML=0.305*giatri2;
+                }
+        
+        </script>
+
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let n= +prompt("Nhập số phần tử");
+    let a=[];
+    let max,chiso,trungbinh,s=0;
+
+    for(let i=0; i<=n; i++)
+        {
+            let k= +prompt("Nhập giá trị phần tử thứ " +(i+1));
+            a[i]=k;
+        }
+
+    max=a[0];    
+    for(let m=0; m<=n; m++)
+        {
+            s=s+a[m];
+            if(a[m]>max)
+            { 
+                    max=a[m];
+                    chiso=m;
+            }
+        
+        }
+
+    trungbinh=s/n;
+
+    document.write("Số lớn nhất có giá trị "+ max + " có vị trí là "+ (chiso+1) +"<br>");
+    document.write("Trung bình các phân tử là "+trungbinh);
+
+
+    </script>
+</body>
+</html>

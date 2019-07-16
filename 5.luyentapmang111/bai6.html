@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[];
+        let n= +prompt("Nhập số lượng phần tử");
+        soluong = 0;
+
+        for( let k=0; k<n; k++)
+                {
+                    a[k]=+prompt("Nhập giá trị phần tử thứ "+(k+1));
+                }
+
+        let m= +prompt("Nhập giá trị cần tìm");
+
+        for( let x=0; x<n; x++ )
+        {
+                if (a[x]==m) 
+                {
+                    soluong=soluong+1; 
+                }
+
+        }
+
+        if (soluong>0)
+            {
+                document.write("V nằm trong mảng "+ " có "+ soluong +" phần tử V" );
+            }
+
+        else
+            document.write("V không nằm trong mảng");
+
+        </script>
+</body>
+</html>

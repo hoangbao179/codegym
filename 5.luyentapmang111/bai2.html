@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let a=[];
+    let chiso=0;
+    let k;
+
+    for(let x=0; x<10; x++)
+            {
+                a[x]= +prompt("Nhập các phần tử trong mảng")
+            }
+
+    let max=a[0];
+
+        for( k=0; k<=10; k++)
+            {
+                if (a[k]>max)  
+                {
+                    max =a[k];
+                    chiso=k+1;
+                }
+
+            }
+        
+    document.write("phần tử thứ "+chiso+" là phần tử lớn nhất có giá trị "+max);
+
+    </script>
+</body>
+</html>
