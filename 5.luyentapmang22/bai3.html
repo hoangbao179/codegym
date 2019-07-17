@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let soluong=+prompt("Nhập số lượng phần tử mảng");
+        let mang=[];
+        for (let i=0; i<soluong; i++)
+            {
+                mang[i]=prompt("Nhập giá trị phần tử thứ "+(i+1));
+            }
+        
+        document.write("Mảng cũ là "+mang+"<br>");
+
+        let kituso= [0,1,2,3,4,5,6,7,8,9];
+        function timso(abc)
+            {   
+                let dem=0;
+                for( let k=0; k<soluong; k++)
+                    {
+                        for ( let m=0; m<=10; m++)
+                        {
+                            if(mang[k]==kituso[m])
+                            {
+                                dem=dem+1;
+                            }
+
+                        }
+                        
+                    }
+
+                return dem;
+            }
+  
+    document.write("Mảng trên có "+timso(mang)+" số");
+    
+    </script>
+</body>
+</html>

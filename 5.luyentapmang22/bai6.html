@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let soluong=+prompt("Nhập số lượng phần tử mảng");
+        let mang=[];
+        for (let i=0; i<soluong; i++)
+            {
+                mang[i]=prompt("Nhập giá trị phần tử thứ "+(i+1));
+            }
+        
+        document.write("Mảng cũ là "+mang+"<br>");
+        let kitu="-";
+
+
+
+        let chiso=0;
+        
+        let k=-1;
+        for(let i=0; i<=mang.length; i++)
+        {
+            if (mang[i] ==kitu)
+            {
+
+                mang[i]="_";
+            }
+        }
+        document.write("Mảng mới là "+mang+"<br>");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let chuoi1=prompt("Nhập chuỗi 1");
+        let chuoi2=prompt("Nhập chuôi 2");
+        
+        let mangkitu1=[];
+        for(let i=0; i<chuoi1.length ; i++)
+            {
+                mangkitu1[i]=chuoi1.charAt(i);
+            }
+    
+        document.write("Chuỗi nhập là "+chuoi1+"<br>");
+        let mangkitu2=[];
+        for(let i=0; i<chuoi2.length ; i++)
+            {
+                mangkitu2[i]=chuoi2.charAt(i);
+            }
+    
+        document.write("Chuỗi nhập là "+chuoi2+"<br>");
+        let dem=0;
+       
+        for(let i=0; i<chuoi1.length ; i++)
+            {
+                if(mangkitu1[i]===mangkitu2[i]);
+                    {
+                        dem=dem+1;
+                    }
+
+            }
+        if (dem==(chuoi1.length) && (dem==chuoi2.length))
+            {
+                document.write("Hai chuỗi giống nhau");
+
+            }
+        else document.write("Hai chuỗi không giống nhau");
+
+
+
+
+
+
+
+       
+        
+    
+    
+    
+    
+    </script>
+</body>
+</html>

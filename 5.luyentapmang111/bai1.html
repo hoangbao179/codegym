@@ -8,28 +8,28 @@
 </head>
 <body>
     <script>
-        let a=[];
+        let mang=[];
         let dem =0;
-        mang=[];
+        mang1=[];
         let m =0;
 
         for (x=0; x<10; x++)
             {
-                a[x]= +prompt("Nhập phần tử trong mảng");
+                mang[x]= +prompt("Nhập phần tử trong mảng");
 
             }
 
         for (x=0; x<=10; x++)
             {
-                if(a[x]>=10)
+                if(mang[x]>=10)
                 {
                     dem=dem+1;
-                    mang[m]=a[x];
+                    mang1[m]=mang[x];
                     m=m+1;
                 }
             }
             
-            document.write("Có "+ dem+ " số lớn hơn hoặc bằng 10 gồm các số " + mang);
+            document.write("Có "+ dem + " số lớn hơn hoặc bằng 10 gồm các số " + mang1);
 
     </script>
 </body>

@@ -8,17 +8,14 @@
 </head>
 <body>
     <script>
-    let n= +prompt("Nhập số  lượng phần tử");
-    let a=[];
-    for (let i=0; i<n; i++)
-    {
-        a[i]= +prompt("Nhập giá trị phần tử thứ " +(i+1));
-    }
-    for(let k=0; k<n; k++)
-    {
+        let mang1=[0,1,2,3,4,5,6,7,8,9];
+        let mang2=[9,8,7,6,5,4,3,2,1,0];
         
-    }
-    
+        document.write("Mảng 1 gồm "+mang1+"<br>");
+        document.write("Mảng 2 gồm "+mang2+"<br>");
+
+        let mang3=mang1.concat(mang2);
+        document.write("Mảng 3 gồm "+mang3);
     </script>
 </body>
 </html>

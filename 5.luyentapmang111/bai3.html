@@ -9,22 +9,22 @@
 <body>
     <script>
     let n= +prompt("Nhập số phần tử");
-    let a=[];
+    let mang=[];
     let max,chiso,trungbinh,s=0;
 
     for(let i=0; i<=n; i++)
         {
             let k= +prompt("Nhập giá trị phần tử thứ " +(i+1));
-            a[i]=k;
+            mang[i]=k;
         }
 
-    max=a[0];    
+    max=mang[0];    
     for(let m=0; m<=n; m++)
         {
-            s=s+a[m];
-            if(a[m]>max)
+            s=s+mang[m];
+            if(mang[m]>max)
             { 
-                    max=a[m];
+                    max=mang[m];
                     chiso=m;
             }
         

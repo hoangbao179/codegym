@@ -8,22 +8,22 @@
 </head>
 <body>
     <script>
-    let a=[];
+    let mang=[];
     let chiso=0;
     let k;
 
     for(let x=0; x<10; x++)
             {
-                a[x]= +prompt("Nhập các phần tử trong mảng")
+                mang[x]= +prompt("Nhập giá trị phần tử thứ " +x)
             }
 
-    let max=a[0];
+    let max=mang[0];
 
         for( k=0; k<=10; k++)
             {
-                if (a[k]>max)  
+                if (mang[k]>max)  
                 {
-                    max =a[k];
+                    max =mang[k];
                     chiso=k+1;
                 }
 
