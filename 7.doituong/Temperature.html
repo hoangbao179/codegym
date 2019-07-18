@@ -17,18 +17,22 @@
         {
             return this.Celsius;
         }
+
         this.setCelsius = function(C)  
         {
             this.Celsius=C;
         }
+
         this.Fahrenheit = function()
         {
             return (this.Celsius*1.8)+32;
         }
+
         this.Kenvin =function()
         {
             return (this.Celsius+273);
         }
+        
     }
     
     let temperature= new Temperature(25);

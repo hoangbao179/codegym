@@ -12,18 +12,15 @@
         {
             this.radius=radius;
 
-
-
-
-        this.getRadius = function(radius)
-        {
-            return this.radius;
-        }
-        this.getArea = function(radius)
-        {
-            return this.radius*this.radius*Math.PI;
-        }
-
+            this.getRadius = function(radius)
+            {
+                return this.radius;
+            }
+            
+            this.getArea = function(radius)
+            {
+                return this.radius*this.radius*Math.PI;
+            }
 
         }
         let circle = new Circle(2);
@@ -33,8 +30,6 @@
         circle= new Circle(3);
   
         document.write("Hình tròn có bán kính "+circle.getRadius()+" có diện tích "+circle.getArea()+"<br>");
-    
-    
     
     </script>
 </body>

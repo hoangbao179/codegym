@@ -9,48 +9,45 @@
 <body>
     <canvas id="myCanvas" width="1024px" height="500px" style="border: 2px solid red"></canvas>
     <script>
-    function Circle(x,y,radius)
-    {
-        this.x=x;
-        this.y=y;
-        this.radius=radius;
-    }
-
-    function randomHex()
-    {
-        return Math.floor(Math.random()*255);
-    }
-    function randomColor()
-    {
-        red=randomHex();
-        blue=randomHex();
-        green= randomHex();
-        return "rgb("+red+","+blue+","+green+")";
-    }
-
-
-
-    function createCircle()
-    {
-        ctx=document.getElementById("myCanvas").getContext("2d");
-        let radius=Math.floor(Math.random()*70);
-        let color=randomColor();
-        let x=Math.random()*1000;
-        let y=Math.random()*400;
-        let circle= new Circle(x,y,radius);
-        ctx.beginPath();
-        ctx.arc(circle.x, circle.y, circle.radius, 0, 2*Math.PI);
-        ctx.fillStyle=color;
-        ctx.fill();
-    }
-    
-        for (let i=0; i<30; i++)
+        function Circle(x,y,radius)
         {
-            createCircle();
+            this.x=x;
+            this.y=y;
+            this.radius=radius;
         }
 
-    
-    
+        function randomHex()
+        {
+            return Math.floor(Math.random()*255);
+        }
+        
+        function randomColor()
+        {
+            red=randomHex();
+            blue=randomHex();
+            green= randomHex();
+            return "rgb("+red+","+blue+","+green+")";
+        }
+
+        function createCircle()
+        {
+            ctx=document.getElementById("myCanvas").getContext("2d");
+            let radius=Math.floor(Math.random()*70);
+            let color=randomColor();
+            let x=Math.random()*1000;
+            let y=Math.random()*400;
+            let circle= new Circle(x,y,radius);
+            ctx.beginPath();
+            ctx.arc(circle.x, circle.y, circle.radius, 0, 2*Math.PI);
+            ctx.fillStyle=color;
+            ctx.fill();
+        }
+        
+            for (let i=0; i<30; i++)
+            {
+                createCircle();
+            }
+
     </script>
 </body>
 </html>
