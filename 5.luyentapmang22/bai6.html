@@ -8,30 +8,29 @@
 </head>
 <body>
     <script>
-        let soluong=+prompt("Nhập số lượng phần tử mảng");
-        let mang=[];
-        for (let i=0; i<soluong; i++)
+
+        let chuoi=prompt("Nhập chuỗi");
+
+        document.write("Chuỗi cũ "+chuoi+"<br>");
+
+        let mangkitu=[];
+        for(let i=0; i<chuoi.length ; i++)
             {
-                mang[i]=prompt("Nhập giá trị phần tử thứ "+(i+1));
+                mangkitu[i]=chuoi.charAt(i);
             }
-        
-        document.write("Mảng cũ là "+mang+"<br>");
+            
         let kitu="-";
 
-
-
-        let chiso=0;
-        
-        let k=-1;
-        for(let i=0; i<=mang.length; i++)
+        for(let i=0; i<=mangkitu.length; i++)
         {
-            if (mang[i] ==kitu)
+            if (mangkitu[i] ==kitu)
             {
-
-                mang[i]="_";
+                mangkitu[i]="_";
             }
+
         }
-        document.write("Mảng mới là "+mang+"<br>");
+
+        document.write("Mảng mới là "+mangkitu.join("")+"<br>");
 
     </script>
 </body>
