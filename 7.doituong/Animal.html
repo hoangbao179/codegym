@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Animal(name, legs, sound){
+            this.name = name;
+            this.legs = legs;
+            this.sound = sound;
+            this.getLegs = function(){
+                return  this.legs;
+            }
+            this.speak = function(){
+                return this.name + ' speaks: ' + this.sound;
+            }
+            this.changeSound = function(s){
+                this.sound = s;
+            }
+        }
+        let dog = new Animal('Dog', '4', 'Go go');
+        let chicken = new Animal('Chicken', '2', 'Chipchip');
+    </script>
+</body>
+</html>

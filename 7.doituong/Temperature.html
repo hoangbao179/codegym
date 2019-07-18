@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Temperature (Celsius)
+    {
+        this.Celsius=Celsius;
+    
+        this.getCelsius = function()    //lấy giá trị ra
+        {
+            return this.Celsius;
+        }
+        this.setCelsius = function(C)  
+        {
+            this.Celsius=C;
+        }
+        this.Fahrenheit = function()
+        {
+            return (this.Celsius*1.8)+32;
+        }
+        this.Kenvin =function()
+        {
+            return (this.Celsius+273);
+        }
+    }
+    
+    let temperature= new Temperature(25);
+    document.write("Nhiệt độ phòng là " + temperature.getCelsius()+" C"+"<br>");
+    document.write("Chuyển sang độ F có giá trị "+temperature.Fahrenheit()+"<br>");
+    document.write("Chuyển sang độ K có giá trị "+temperature.Kenvin()+"<br>");
+    
+    </script>
+</body>
+</html>

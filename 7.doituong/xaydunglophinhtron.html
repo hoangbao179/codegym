@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Circle = function (radius)
+        {
+            this.radius=radius;
+
+
+
+
+        this.getRadius = function(radius)
+        {
+            return this.radius;
+        }
+        this.getArea = function(radius)
+        {
+            return this.radius*this.radius*Math.PI;
+        }
+
+
+        }
+        let circle = new Circle(2);
+        let radius= circle.getRadius();
+        let area= circle.getArea();
+        document.write("Hình tròn có bán kính "+radius+" có diện tích "+area+"<br>");
+        circle= new Circle(3);
+  
+        document.write("Hình tròn có bán kính "+circle.getRadius()+" có diện tích "+circle.getArea()+"<br>");
+    
+    
+    
+    </script>
+</body>
+</html>
