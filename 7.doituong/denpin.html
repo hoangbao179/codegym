@@ -12,9 +12,11 @@
             constructor(enery){
                 this.enery = enery;
             }
+            
             getEnery(){
                 return this.enery;
             }
+
             decreaseEnergy(){
                 if(this.enery > 0){
                     this.enery --;
@@ -29,22 +31,27 @@
             getBatteryInfo(){
                 return this.battery.getEnery();
             }
+
             turnOn(){
                 this.status = true;
             }
+
             turnOff(){
                 this.status = false;
             }
+
             light(){
                 if(this.status){
                     alert("đèn sáng");
                 } else alert("đèn không sáng")
             }
         }
+
         let battery= new Battery(10);
         let flashLamp= new FlashLamp(battery);
         document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
         document.write("Turn on<br/>")
+
         flashLamp.turnOn();
         flashLamp.light();
         document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
