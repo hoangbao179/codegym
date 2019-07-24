@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+    table,tr,td { border: 1px red; border-style: solid;
+        border-collapse: collapse;
+                 padding: 5px 10px; 
+                }   
+    </style>
+
+<body>
+    <table>
+        <tr>
+                <td>
+                    Adam
+                </td>
+                <td>
+                    Eva
+                </td>
+        </tr>
+        <tr>
+                <td>
+                    <input type="button" onclick="Eat(1)" value="Eat" id="eat1">
+                </td>
+                <td>
+                    <input type="button" onclick="Eat(2)" value="Eat" id="eat2">
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <p id= "adamWeight"></p>
+            </td>
+            <td>
+                <p id = "evaWeight"></p>
+            </td>
+        </tr>
+    </table>
+    <script>
+        class Apple{
+            constructor(weight){
+                this.weight = weight;
+            }
+            isEmpty()
+            {
+                return this.weight <= 0;
+            }
+        }
+
+        class Human{
+            constructor(name, gender, weight){
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+            eat(apple) {
+                if(!apple.isEmpty()){
+                    this.weight=this.weight+1;
+                    apple.weight=apple.weight-1;
+                }
+            }
+        }
+        let apple = new Apple(12);
+
+        let eva = new Human("Eva","Female",60);
+        let adam = new Human("Adam","Male",80);
+
+        let adamWeight = document.getElementById("adamWeight");
+        let evaWeight = document.getElementById("evaWeight");
+
+
+       function Eat(id){
+           if(apple.isEmpty())
+                alert("Apple is empty");
+           else{
+                let obj=id===1?adam:eva;
+                obj.eat(apple);
+                adamWeight.innerHTML=adam.weight;
+                evaWeight.innerHTML=eva.weight;
+           }
+
+       }
+    
+    </script>
+</body>
+</html>

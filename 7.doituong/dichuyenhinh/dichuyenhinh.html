@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onkeydown="play(event)">
+
+        <div id = "game" ></div>
+    <script>
+        
+        let khoangcach = 10;
+        class ImageDep{
+            constructor (image, top, left, width, height)
+            {
+                this.image = image;
+                this.top = top;
+                this.left = left;
+                this.width = width;
+                this.height = height;
+            }
+            createImage(){
+                return '<img width="'+this.width+'" height="'+this.height+
+                '" src= "'+this.image+'" style="top: '+ this.top +'px; left: '+ this.left+'px; position: absolute">'
+           
+            }
+            moveImage = function (event) {
+                console.log(event.keyCode);
+                switch(event.keyCode){
+                    case 37:{
+                        this.left = this.left - 10;
+                        this.image = "anh2.jpg";
+                        
+                        break;
+                    }
+                    case 38: {
+                        this.image = "anh6.jpg"
+                        this.top  = this.top - khoangcach;
+                        break;
+                    }
+                    case 39:{
+                        this.image = "anh4.jpg"
+                        this.left = this.left + khoangcach;
+                        break;
+                    }
+                    case 40:{
+                        this.image = "anh5.jpg"
+                        this.top = this.top + khoangcach;
+                        break;
+                    }
+
+                }
+
+            }
+        }
+
+        let hinhanh = new ImageDep("anh1.jpg", 200, 200, 300, 200)
+        document.getElementById("game").innerHTML = hinhanh.createImage();
+
+
+        function play(event){
+            hinhanh.moveImage(event);
+            document.getElementById("game").innerHTML = hinhanh.createImage();
+        }
+    
+    
+    </script>
+</body>
+</html>

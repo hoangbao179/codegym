@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Battery{
+            constructor(enery){
+                this.enery = enery;
+            }
+            getEnery(){
+                return this.enery;
+            }
+            decreaseEnergy(){
+                if(this.enery > 0){
+                    this.enery --;
+                }
+            }
+        }
+
+        class FlashLamp{
+            constructor(battery){
+                this.battery = battery;
+            }
+            getBatteryInfo(){
+                return this.battery.getEnery();
+            }
+            turnOn(){
+                this.status = true;
+            }
+            turnOff(){
+                this.status = false;
+            }
+            light(){
+                if(this.status){
+                    alert("đèn sáng");
+                } else alert("đèn không sáng")
+            }
+        }
+        let battery= new Battery(10);
+        let flashLamp= new FlashLamp(battery);
+        document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+        document.write("Turn on<br/>")
+        flashLamp.turnOn();
+        flashLamp.light();
+        document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+
+        document.write("Turn off<br/>")
+        flashLamp.turnOff();
+        flashLamp.light();
+
+    </script>
+</body>
+</html>

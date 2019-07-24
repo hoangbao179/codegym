@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Cầu dao" onclick="nut()">
+    <script>
+    class ElictricLamp{
+        constructor (status){
+            this.status=status;
+                }
+
+    turnOn(){
+        this.status=true;
+        console.log("light")
+            }
+
+    turnOff(){
+        this.status=false;
+        console.log("not light");
+            }
+
+    }
+
+    class SwitchButton{
+        constructor(status){
+            this.status=status;
+            }
+            
+    switchOff(){
+        this.status=false;
+        elictricLamp.turnOff();
+            }
+            
+    switchOn(){
+        this.status=true;
+        elictricLamp.turnOn()
+    }
+
+
+    }
+    
+    let elictricLamp= new ElictricLamp(false);
+    let switchButton= new SwitchButton(false);
+    function nut()
+    {
+        
+    }
+    </script>
+</body>
+</html>
