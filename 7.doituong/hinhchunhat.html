@@ -7,56 +7,56 @@
     <title>Document</title>
 </head>
 <body>
-    <canvas id="myCanvas" width="1024px" height="540px" style="border: 2px solid red "></canvas>
+    <canvas id = "myCanvas" width="1024px" height="540px" style="border: 2px solid red "></canvas>
     <script>
     function Rectangle(width,height)
     {   
-        this.width=width;
-        this.height=height;
-        this.getWidth=function() //lấy giá trị ra
+        this.width = width;
+        this.height = height;
+        this.getWidth = function() //lấy giá trị ra
         {
             return this.width;
         }
 
-        this.getHeight=function()
+        this.getHeight = function()
         {
             return this.height;
         }
         
-        this.setWidth=function(k)   //bỏ giá trị vào là k
+        this.setWidth = function(k)   //bỏ giá trị vào là k
         {
-            this.width=k;
+            this.width = k;
         }
 
-        this.setHeight=function(k)
+        this.setHeight = function(k)
         {
-            this.height=k;
+            this.height = k;
         }
         
-        this.Area=function()    
+        this.Area = function()    
         {
             return this.width*this.height;
         }
 
-        this.Perimeter=function()
+        this.Perimeter = function()
         {
             return 2*(this.width+this.height)
         }
 
     }
     
-    let ctx=document.getElementById("myCanvas").getContext("2d");
-    let width=Math.floor(Math.random()*200);
-    let height=Math.floor(Math.random()*200);
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    let width = Math.floor(Math.random()*200);
+    let height = Math.floor(Math.random()*200);
     let rectangle = new Rectangle(width,height);
 
     ctx.beginPath();
     ctx.fillStyle="red";
     ctx.fillRect(5,10,width,height);
     document.write("<br>");
-    document.write("Hình chữ nhật có cạnh là "+rectangle.getWidth()+"<br>");
-    document.write("Diện tích hình chữ nhật là "+rectangle.getHeight()+"<br>");
-    document.write("Diện tích hình chữ nhật là "+rectangle.Area()+"<br>");
+    document.write("Hình chữ nhật có cạnh là " + rectangle.getWidth()+"<br>");
+    document.write("Diện tích hình chữ nhật là " + rectangle.getHeight()+"<br>");
+    document.write("Diện tích hình chữ nhật là " + rectangle.Area()+"<br>");
 
     </script>
 </body>
