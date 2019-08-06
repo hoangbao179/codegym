@@ -1,0 +1,50 @@
+#myCanVas {
+    position: absolute;
+    background-color: #F5D0A9;
+    top: 30px;
+    left: 300px;
+
+}
+#start{
+    position: absolute;
+    left: 300px;
+    top: 5px;
+}
+#background {
+    position: absolute;
+    border: 1px solid #000000;
+    width: 750px;
+    height: 450px;
+    top: 30px;
+    left: 300px;
+}
+
+#play{
+    position: absolute;
+    border: 1px solid #000000;
+    width: 217px;
+    height: 94px;
+    top: 330px;
+    left: 570px;
+}
+
+#playgame{
+    position: absolute;
+    width: 153px;
+    height: 58px;
+    top: 350px;
+    left: 750px;
+}
+
+#guide{
+    position: absolute;
+    font: "30px Georgia";
+    color: black;
+    font-weight: bold;
+    top: 480px;
+    left: 580px;
+}
+
+body{
+    background: url(image/sunset.jpg);
+}
