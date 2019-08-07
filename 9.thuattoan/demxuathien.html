@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[Thực hành] Đếm số lần xuất hiện của phần tử</title>
+</head>
+<body>
+<script>
+    function count(arr, data) {
+        var count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (data === arr[i])
+                count++;
+        }
+        return count;
+    }
+    var nums = [];
+    for (var i = 0; i < 100; ++i) {
+        nums[i] = Math.floor(Math.random() * 101);
+        document.write(nums[i] + "  ");
+    }
+    document.write("<br>")
+    var val = parseInt(prompt("Enter a value to count: "));
+    var retVal = count(nums, val);
+    document.write("Found " + retVal + " occurrences of " + val + ".");
+</script>
+</body>
+</html>
